@@ -1,6 +1,9 @@
 package types
 
-import "time"
+import (
+	"strconv"
+	"time"
+)
 
 // This file was taken from the aws go sdk
 
@@ -179,6 +182,11 @@ func IntValueMap(src map[string]*int) map[string]int {
 		}
 	}
 	return dst
+}
+
+// IntToStr converts the given int to string.
+func IntToStr(v int) string {
+	return strconv.Itoa(v)
 }
 
 // Int32 returns a pointer to of the int64 value passed in.

@@ -1,7 +1,6 @@
-package x
+package strings
 
 import (
-	"math"
 	"strconv"
 	"strings"
 )
