@@ -38,6 +38,15 @@ func ConvertFloat64(str string) (float64, error) {
 	return strconv.ParseFloat(str, 64)
 }
 
+// ConvertInt turn a string into a int16
+func ConvertInt(str string) (int, error) {
+	i, err := strconv.Atoi(str)
+	if err != nil {
+		return 0, err
+	}
+	return i, nil
+}
+
 // ConvertInt8 turn a string into int8 boolean
 func ConvertInt8(str string) (int8, error) {
 	i, err := strconv.ParseInt(str, 10, 8)
